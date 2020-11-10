@@ -1,4 +1,6 @@
 import os
+import time
+start_time = time.time()
 
 os.chdir(r'D:\Codes\append-ig\test-folder-master')
 master = os.listdir(r'D:\Codes\append-ig\test-folder-master')
@@ -35,6 +37,8 @@ def remove_ig_dir(directory):
             os.replace(img, img.replace("-ig.jpg", ".jpg"))
 
 
-remove_ig_dir(master)
+#remove_ig_dir(master)
 
-# append_ig_dir(local, master)
+append_ig_dir(local, master)
+
+print("--- %s seconds ---" % (time.time() - start_time))
